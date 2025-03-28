@@ -1,6 +1,9 @@
 package main;
 
+import java.lang.reflect.Array;
+import java.nio.charset.Charset;
 import java.util.*;
+import java.nio.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -315,8 +318,80 @@ public class Main {
         return (n * (Math.pow(s,2))) / (4 * Math.tan(Math.PI / n));
     }*/
 
-        
+//        //36. Distance Between Two Points
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Input the latitude of coordinate 1: ");
+//        double x1 = input.nextDouble();
+//        System.out.print("Input the longitude of coordinate 1: ");
+//        double x2 = input.nextDouble();
+//        System.out.print("Input the latitude of coordinate 2: ");
+//        double y1 = input.nextDouble();
+//        System.out.print("Input the longitude of coordinate 2: ");
+//        double y2 = input.nextDouble();
+//
+//        System.out.println("The distance between those points is: " + distanceTwoPoint(x1, x2, y1, y2));
+//    }
+//    public static double distanceTwoPoint(double x1, double x2, double y1, double y2){
+//        x1 = Math.toRadians(x1);
+//        x2 = Math.toRadians(x2);
+//        y1 = Math.toRadians(y1);
+//        y2 = Math.toRadians(y2);
+//        double r = 6371.01;
+//        return r * Math.acos(Math.sin(x1) * Math.sin(x2) + Math.cos(x1) * Math.cos(x2) * Math.cos(y1 - y2));
+
+/*        //37 Reverse a string
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a string:");
+        char[] letters = input.nextLine().toCharArray();
+        for(int i = letters.length-1; i>=0; i--){
+            System.out.print(letters[i]);
+        }*/
+/*
+        //38 Count characters in a String
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a string: ");
+        char[] s = input.nextLine().toCharArray();
+        int letter , space , digit , other;
+        letter = space = digit = other = 0;
+
+        for(int i = 0; i < s.length; i++){
+            if(Character.isLetter(s[i])){
+                letter ++;
+            } else if (Character.isDigit(s[i])) {
+                digit ++;
+            } else if (Character.isSpaceChar(s[i])) {
+                space ++;
+            }else{
+                other ++;
+            }
+        }
+        System.out.println("Letter: "+ letter);
+        System.out.println("Space: "+ space);
+        System.out.println("Digit: "+ digit);
+        System.out.println("Other: "+ other);
+*/
+        /*//39 Unique Three Digit Numbers
+        int counter = 0;
+        for (int first = 1; first <= 4; first++) {
+            for (int second = 1; second <= 4; second++) {
+                if (second == first) continue; // Skip if digits are not unique
+
+                for (int third = 1; third <= 4; third++) {
+                    if (third == first || third == second) continue; // Ensure uniqueness
+
+                    counter++; // Increment count
+                    System.out.println(first + "" + second + "" + third);
+                }
+            }
+        }
+        System.out.println("Total unique three-digit numbers: " + counter);*/
+
+        //40 available charsets
+        System.out.println("List of available character sets: ");
+
+        // Iterate through the available character sets and print their names
+        for (String str : Charset.availableCharsets().keySet()) {
+            System.out.println(str);
+        }
     }
 }
-
-
