@@ -386,12 +386,13 @@ public class Main {
         }
         System.out.println("Total unique three-digit numbers: " + counter);*/
 
-        //40 available charsets
+/*        //40 available charsets
         System.out.println("List of available character sets: ");
 
         // Iterate through the available character sets and print their names
         for (String str : Charset.availableCharsets().keySet()) {
             System.out.println(str);
-        }
+        }*/
+        
     }
 }
