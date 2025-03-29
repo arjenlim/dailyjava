@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.nio.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -393,6 +394,65 @@ public class Main {
         for (String str : Charset.availableCharsets().keySet()) {
             System.out.println(str);
         }*/
+        /* //41 Ascii value finder
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a character: ");
+        char ch = input.next().charAt(0);
+        int ascii = ch;
+        System.out.println(ascii);*/
+
+/*        //42 Input and Disply Password
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input your Password: ");
+        String pw = input.next();
+        System.out.print("Your password was: "+ pw);
+
+        //Console approach
+        Console cons;
+        if((cons = System.console()) != null){
+            char[] pass_ward= null;
+
+            try{
+                pass_ward = cons.readPassword("Input your password: ");
+                System.out.println("Your password was: " + new String(pass_ward));
+            }finally {
+                if(pass_ward != null){
+                    java.util.Arrays.fill(pass_ward, ' ');
+                }
+            }
+        }
+        else {
+            throw new RuntimeException("Can't get the password... No console");
+        }*/
+
+/*        //43 Twinkle Poem Formatter
+        System.out.println("Twinkle, twinkle, little star,");
+        System.out.println("\tHow I wonder what you are!");
+        System.out.println("\t\tUp above the world so high,  ");
+        System.out.println("\t\tLike a diamond in the sky.");
+        System.out.println("Twinkle, twinkle, little star, ");
+        System.out.println("\tHow I wonder what you are");*/
+
+        //44 Compute n+nn+nnn
+/*        Scanner input = new Scanner(System.in);
+        while(true) {
+            System.out.println("Input number: ");
+            int n = input.nextInt();
+            int nn = n * 11;
+            int nnn = n * 111;
+            if (n != 0) {
+                int x = n + nn + nnn;
+                System.out.printf("%d + %d + %d\n", n, nn, nnn);
+                System.out.printf("%d + %d %d = " + x +"\n", nnn, nn, n);
+            } else {
+                System.out.println("n is 0");
+            }
+        }*/
+
+/*        //45 File Size Finder
+        // Display the file sizes in bytes for two files.
+        System.out.println("/home/students/abc.txt  : " + new File("abc.txt").length() + " bytes");
+        System.out.println("/home/students/test.txt : " + new File("test.txt").length() + " bytes");*/
         
     }
 }
