@@ -2,9 +2,13 @@ package main;
 
 import java.lang.reflect.Array;
 import java.nio.charset.Charset;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.nio.*;
 import java.io.*;
+import java.time.*;
+import java.text.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -454,5 +458,149 @@ public class Main {
         System.out.println("/home/students/abc.txt  : " + new File("abc.txt").length() + " bytes");
         System.out.println("/home/students/test.txt : " + new File("test.txt").length() + " bytes");*/
 
+/*        //46 Display current time
+        Long currentTime = System.currentTimeMillis();
+        System.out.format("\nCurrent Date time: %tc%n\n", System.currentTimeMillis());
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss");
+        Date date = new Date(currentTime);
+        String time = simpleDateFormat.format(date);
+        System.out.println(time);*/
+
+/*        //47 Display current time and date in specific format
+        // Create a SimpleDateFormat with a specific date and time format
+        SimpleDateFormat cdt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss.SSS");
+
+        // Set the time zone for the calendar to GMT
+        cdt.setCalendar(Calendar.getInstance(TimeZone.getTimeZone("GMT")));
+
+        // Display the current date and time in the specified format
+        System.out.println("\nNow: " + cdt.format(System.currentTimeMillis()));
+
+        //47.1 modify program into dd/mm/yyyy
+        SimpleDateFormat cdt1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss.SSS");
+        System.out.println("\nNow: " + cdt1.format(System.currentTimeMillis()));*/
+
+/*        //48 Print odd numbers
+        for(int i =1; i <100; i++){
+            if(i%2 != 0){
+                System.out.println(i);
+            }
+        }*/
+/*        //48.1 Print even numbers
+        for(int i =1; i <100; i++){
+            if(i%2 == 0){
+                System.out.println(i);
+            }
+        }*/
+        /*//48.2 Print prime numbers within a range
+        for (int i = 1; i <= 100; i++) {
+            int flag = 1;
+            for (int j = 2; j <= Math.sqrt(i); j++)  // 2.Try dividing the number by half check whether it divisible
+            {
+                if (i % j == 0) // 3. If the number is divisible by other number ->Not a prime Number
+                {
+                    flag = 0;
+                    break;
+                }
+
+            }
+            if (flag == 1) // 4. If the number is not divisible by any other numbers but only by itself and 1 -> prime no
+            {
+                System.out.println(i);
+
+            }
+        }*/
+
+        //48.3 Display numbers in reverse order
+        /*for (int i = 100; i >= 0; i--) {
+            if (i % 2 != 0) {
+                System.out.println(i);
+            }
+        }*/
+        //48.4 Find sum of printed numbers
+/*        int sum = 0;
+        for (int i = 100; i >= 0; i--) {
+            if (i % 2 != 0) {
+                sum += i;
+                System.out.println(i);
+            }
+        }
+        System.out.println(sum);*/
+
+/*        //Check even or odd
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int num = input.nextInt();
+        if (num %2 ==0){
+            System.out.println(1);
+        }else{
+            System.out.println(0);
+        }
+        //check input prime or not
+        boolean isPrime = true;
+        if (num <= 1) {
+            isPrime = false; // Numbers less than 2 are not prime
+        } else {
+            for (int i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break; // No need to check further, it's not prime
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println(num + " is a prime number");
+        } else {
+            System.out.println(num + " is not a prime number");
+        }
+        //check input is positive or negative
+        if(num >=0){
+            System.out.println(num+" is positive");
+        }else{
+            System.out.println(num+" is negative");
+        }*/
+
+        //50. Divisible by 3,5,both
+/*        List<Integer> list3=new ArrayList<Integer>();
+        List<Integer> list5=new ArrayList<Integer>();
+        List<Integer> list7=new ArrayList<Integer>();
+        List<Integer> list35=new ArrayList<Integer>();
+        List<Integer> list23=new ArrayList<Integer>();
+        List<Integer> listn=new ArrayList<Integer>();
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a number:");
+        int n = input.nextInt();
+        int count =0;
+
+        for(int i = 1; i<=100; i++){
+            if(i%3 ==0){
+                list3.add(i);
+            }
+            if(i%5 ==0){
+                list5.add(i);
+            }
+            if(i%7 ==0){
+                list7.add(i);
+            }
+            if(i%3 ==0 && i%5 ==0){
+                list35.add(i);
+            }
+            if(i%2 ==0 && i%3 ==0){
+                list23.add(i);
+            }
+            if(i%n ==0){
+                listn.add(i);
+                count += 1;
+            }
+        }
+
+        System.out.println("Divided by 3:\n" + list3);
+        System.out.println("Divided by 5:\n" + list5);
+        System.out.println("Divided by 7:\n" + list7);
+        System.out.println("Divided by 3 and 5:\n" + list35);
+        System.out.println("Divided by 2 and 3:\n" + list23);
+        System.out.println("Divisible by: "+ n +"\n" + listn + " Count: " + count);*/
     }
 }
