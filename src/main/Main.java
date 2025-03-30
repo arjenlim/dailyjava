@@ -602,5 +602,62 @@ public class Main {
         System.out.println("Divided by 3 and 5:\n" + list35);
         System.out.println("Divided by 2 and 3:\n" + list23);
         System.out.println("Divisible by: "+ n +"\n" + listn + " Count: " + count);*/
+
+        //51 String to integer conversion
+/*        Scanner input = new Scanner(System.in);
+        System.out.print("Input a number(string): ");
+        String s = input.nextLine();
+        int n = Integer.parseInt(s);
+        System.out.print("The integer value is: "+n);*/
+
+        //52 Sum Equals Third Integer
+/*        Scanner input = new Scanner(System.in);
+        System.out.print("Input a number 1: ");
+        int num1 = input.nextInt();
+        System.out.print("Input a number 2: ");
+        int num2 = input.nextInt();
+        System.out.print("Input a number 3: ");
+        int num3 = input.nextInt();
+
+        if((num1 + num2) == num3){
+            System.out.println("The result is: true ");
+        }else{
+            System.out.println("The result is: false ");
+        }*/
+
+        //53 Number Comparison Logic
+        /*Scanner input = new Scanner(System.in);
+        System.out.print("Input a number 1: ");
+        int num1 = input.nextInt();
+        System.out.print("Input a number 2: ");
+        int num2 = input.nextInt();
+        System.out.print("Input a number 3: ");
+        int num3 = input.nextInt();
+        System.out.print("Input a boolean value (true/false): ");
+        boolean abc = input.nextBoolean();
+
+        System.out.print("The result is: "+ test(num1, num2, num3, abc));
+        }
+    public static boolean test(int p, int q, int r, boolean abc){
+        if (abc){
+            return(r > q);
+        }else{
+            return(r > q && q > p);
+        }*/
+
+        //54 Same Rightmost Digit Check
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input number 1: ");
+        char[] num1 = input.next().toCharArray();
+        System.out.print("Input number 2: ");
+        char[] num2 = input.next().toCharArray();
+        System.out.print("Input number 3: ");
+        char[] num3 = input.next().toCharArray();
+
+        System.out.print("The result is: " + rightmost(num1, num2, num3));
+    }
+
+    public static boolean rightmost(char[] x, char[] y, char[] z) {
+        return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);
     }
 }
