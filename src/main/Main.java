@@ -661,7 +661,7 @@ public class Main {
         return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);*/
 
         //Find largest in a range of numbers
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         System.out.print("Enter the array size: ");
         int arraySize = 0;
         if(input.hasNextInt()) {
@@ -687,6 +687,8 @@ public class Main {
         input.close();
         System.out.println(Arrays.toString(arr));
         System.out.println(largest);
-        System.out.println(second);
+        System.out.println(second);*/
+
+        
     }
 }
