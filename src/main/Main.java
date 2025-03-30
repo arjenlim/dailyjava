@@ -646,7 +646,7 @@ public class Main {
         }*/
 
         //54 Same Rightmost Digit Check
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         System.out.print("Input number 1: ");
         char[] num1 = input.next().toCharArray();
         System.out.print("Input number 2: ");
@@ -658,6 +658,35 @@ public class Main {
     }
 
     public static boolean rightmost(char[] x, char[] y, char[] z) {
-        return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);
+        return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);*/
+
+        //Find largest in a range of numbers
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the array size: ");
+        int arraySize = 0;
+        if(input.hasNextInt()) {
+            arraySize = input.nextInt();
+        }
+        int[] arr = new int[arraySize];
+        for (int i = 0; i< arraySize; i++){
+            System.out.println("Enter the element of the array at:" + (i + 1));
+            arr[i] = input.nextInt();
+        }
+        int largest = arr[0];
+        int second = arr[1];
+        for(int i = 1; i < arraySize; i++){
+            if(arr[i] > largest){
+                largest = arr[i];
+            }
+            if(arr[i]<largest && arr[i] > second){
+                second = arr[i];
+            }
+        }
+        //Find 2nd largest
+
+        input.close();
+        System.out.println(Arrays.toString(arr));
+        System.out.println(largest);
+        System.out.println(second);
     }
 }
