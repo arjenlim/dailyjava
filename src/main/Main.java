@@ -646,7 +646,7 @@ public class Main {
         }*/
 
         //54 Same Rightmost Digit Check
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         System.out.print("Input number 1: ");
         char[] num1 = input.next().toCharArray();
         System.out.print("Input number 2: ");
@@ -658,8 +658,8 @@ public class Main {
     }
 
     public static boolean rightmost(char[] x, char[] y, char[] z) {
-<<<<<<< HEAD
         return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);*/
+
 
         //Find largest in a range of numbers
         /*Scanner input = new Scanner(System.in);
@@ -690,9 +690,5 @@ public class Main {
         System.out.println(largest);
         System.out.println(second);*/
 
-        
-=======
-        return (x[x.length-1] == y[y.length-1] || x[x.length-1] == z[z.length-1] || y[y.length-1] == z[z.length-1]);
->>>>>>> parent of 1edf947 (Update Main.java)
     }
 }
