@@ -690,5 +690,17 @@ public class Main {
         System.out.println(largest);
         System.out.println(second);*/
 
+        //55 Seconds to Time conversion
+/*        Scanner input = new Scanner(System.in);
+        int second = input.nextInt();
+
+        int s = second%60;
+        int h = second/60;
+        int m = h%60;
+        h = h/60;
+
+        System.out.printf("%d:%d:%d", h,m,s);*/
+
+
     }
 }
