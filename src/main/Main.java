@@ -702,6 +702,16 @@ public class Main {
         System.out.printf("%d:%d:%d", h,m,s);*/
 
         //56 Count divisibles in range
-        
+        int x = 5;
+        int y = 20;
+        int p = 3;
+        int count = 0;
+
+        for(int i = 5; i <= 20; i++){
+            if (i%p ==0){
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
