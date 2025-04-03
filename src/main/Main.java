@@ -702,7 +702,7 @@ public class Main {
         System.out.printf("%d:%d:%d", h,m,s);*/
 
         //56 Count divisibles in range
-        int x = 5;
+/*        int x = 5;
         int y = 20;
         int p = 3;
         int count = 0;
@@ -712,6 +712,45 @@ public class Main {
                 count++;
             }
         }
-        System.out.println(count);
+        System.out.println(count);*/
+
+        //57 Count factors of integer
+/*        Scanner in = new Scanner(System.in);
+        System.out.print("Input an integer: ");
+
+        // Read an integer from the user
+        int x = in.nextInt();
+
+        // Call the result method and print the result
+        System.out.println(result(x));
+    }
+
+    // Define a method to calculate the number of divisors for a given integer
+    public static int result(int num) {
+        int ctr = 0;
+
+        // Iterate from 1 to the square root of the input number
+        for (int i = 1; i <= (int) Math.sqrt(num); i++) {
+            // Check if 'i' is a divisor, and if it's not a perfect square
+            if (num % i == 0 && i * i != num) {
+                ctr += 2;  // Increase the count by 2
+            } else if (i * i == num) {
+                ctr++;  // If 'i' is a perfect square, increase the count by 1
+            }
+        }
+        return ctr;*/
+
+        //58 Capitalize first letter of each word
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+
+        String upper_case_list = "";
+        Scanner lineScan = new Scanner(s);
+        while(lineScan.hasNext()){
+            String word = lineScan.next();
+            upper_case_list += Character.toUpperCase(word.charAt(0)) + word.substring(1)+ " ";
+        }
+        System.out.println(upper_case_list);
+
     }
 }
