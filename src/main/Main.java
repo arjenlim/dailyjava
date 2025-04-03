@@ -741,7 +741,7 @@ public class Main {
         return ctr;*/
 
         //58 Capitalize first letter of each word
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         String s = input.nextLine();
 
         String upper_case_list = "";
@@ -750,7 +750,8 @@ public class Main {
             String word = lineScan.next();
             upper_case_list += Character.toUpperCase(word.charAt(0)) + word.substring(1)+ " ";
         }
-        System.out.println(upper_case_list);
+        System.out.println(upper_case_list);*/
 
+        
     }
 }
