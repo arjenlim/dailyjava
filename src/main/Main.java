@@ -752,6 +752,10 @@ public class Main {
         }
         System.out.println(upper_case_list);*/
 
-        
+        //59 Convert to lowercase
+/*        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        System.out.println(s.toLowerCase());*/
+
     }
 }
