@@ -797,12 +797,12 @@ public class Main {
                 System.out.println("You lost!");
             }
 
-            System.out.println("Play again? (yes/no): ");
+            System.out.println("Play again? (y/n): ");
             String answer = input.next().trim().toLowerCase();
-            if (answer.equals("no")) {
+            if (answer.equals("n")) {
                 System.out.println("Thanks for playing!");
                 repeat = false;
-            } else if (!answer.equals("yes")) {
+            } else if (!answer.equals("y")) {
                 System.out.println("Invalid input. Exiting game.");
                 repeat = false;
             }
