@@ -763,5 +763,13 @@ public class Main {
         String[] words = s.split(" ");
         String penultimate = words[words.length -2];
         System.out.println(penultimate);*/
+
+        //61 Reverse a string
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        char[] letters = s.toCharArray();
+        for(int i = letters.length-1; i>=0; i--){
+            System.out.print(letters[i]);
+        }
     }
 }
