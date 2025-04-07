@@ -765,11 +765,11 @@ public class Main {
         System.out.println(penultimate);*/
 
         //61 Reverse a string
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         String s = input.nextLine();
         char[] letters = s.toCharArray();
         for(int i = letters.length-1; i>=0; i--){
-            System.out.print(letters[i]);
+            System.out.print(letters[i]);*/
         }
     }
 }
