@@ -9,6 +9,7 @@ import java.nio.*;
 import java.io.*;
 import java.time.*;
 import java.text.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args) {
@@ -765,11 +766,48 @@ public class Main {
         System.out.println(penultimate);*/
 
         //61 Reverse a string
-        /*Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         String s = input.nextLine();
         char[] letters = s.toCharArray();
         for(int i = letters.length-1; i>=0; i--){
-            System.out.print(letters[i]);*/
+            System.out.print(letters[i]);
+        }*/
+        //Rock paper scissors game
+        String[] moves = {"rock", "paper", "scissors"};
+
+        Scanner input = new Scanner(System.in);
+        boolean repeat = true;
+        while (repeat == true) {
+            int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
+            String cpu = moves[randomNum];
+            System.out.println("Enter your move (Rock/Paper/Scissors):");
+            String playermove = input.next().toLowerCase().trim();
+            if (!playermove.equals("rock") && !playermove.equals("paper") && !playermove.equals("scissors")) {
+                System.out.println("Invalid move. Please choose your move again (Rock/Paper/Scissors)");
+                continue;
+            }
+            System.out.print("Computer chose " + Character.toUpperCase(cpu.charAt(0)) + cpu.substring(1) + "\n");
+            if (playermove.equals(cpu)) {
+                System.out.println("It's a draw!");
+            } else if (playermove.equals("rock") && cpu.equals("scissors") ||
+                    playermove.equals("paper") && cpu.equals("rock") ||
+                    playermove.equals("scissors") && cpu.equals("paper")) {
+                System.out.println("You won!");
+            } else {
+                System.out.println("You lost!");
+            }
+
+            System.out.println("Play again? (yes/no): ");
+            String answer = input.next().trim().toLowerCase();
+            if (answer.equals("no")) {
+                System.out.println("Thanks for playing!");
+                repeat = false;
+            } else if (!answer.equals("yes")) {
+                System.out.println("Invalid input. Exiting game.");
+                repeat = false;
+            }
         }
+
+
     }
 }
