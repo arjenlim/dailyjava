@@ -757,5 +757,11 @@ public class Main {
         String s = input.nextLine();
         System.out.println(s.toLowerCase());*/
 
+        //60 Find penultimate word
+/*        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        String[] words = s.split(" ");
+        String penultimate = words[words.length -2];
+        System.out.println(penultimate);*/
     }
 }
