@@ -773,7 +773,7 @@ public class Main {
             System.out.print(letters[i]);
         }*/
         //Rock paper scissors game
-        String[] moves = {"rock", "paper", "scissors"};
+        /*String[] moves = {"rock", "paper", "scissors"};
 
         Scanner input = new Scanner(System.in);
         boolean repeat = true;
@@ -806,8 +806,16 @@ public class Main {
                 System.out.println("Invalid input. Exiting game.");
                 repeat = false;
             }
-        }
+        }*/
 
-
+        //62. Check Subtraction Difference
+ /*       Scanner input = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int first = input.nextInt();
+        System.out.print("Enter the second number: ");
+        int second = input.nextInt();
+        System.out.print("Enter the third number: ");
+        int third = input.nextInt();
+        System.out.println((Math.abs(first - second)>=20 || Math.abs(first - third)>=20 || Math.abs(second - third)>=20));*/
     }
 }
