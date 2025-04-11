@@ -772,8 +772,9 @@ public class Main {
         for(int i = letters.length-1; i>=0; i--){
             System.out.print(letters[i]);
         }*/
+
         //Rock paper scissors game
-        /*String[] moves = {"rock", "paper", "scissors"};
+        String[] moves = {"rock", "paper", "scissors"};
 
         Scanner input = new Scanner(System.in);
         boolean repeat = true;
@@ -786,7 +787,7 @@ public class Main {
                 System.out.println("Invalid move. Please choose your move again (Rock/Paper/Scissors)");
                 continue;
             }
-            System.out.print("Computer chose " + Character.toUpperCase(cpu.charAt(0)) + cpu.substring(1) + "\n");
+            System.out.println("Computer chose " + Character.toUpperCase(cpu.charAt(0)) + cpu.substring(1));
             if (playermove.equals(cpu)) {
                 System.out.println("It's a draw!");
             } else if (playermove.equals("rock") && cpu.equals("scissors") ||
@@ -806,7 +807,7 @@ public class Main {
                 System.out.println("Invalid input. Exiting game.");
                 repeat = false;
             }
-        }*/
+        }
 
         //62. Check Subtraction Difference
  /*       Scanner input = new Scanner(System.in);
