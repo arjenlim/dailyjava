@@ -774,11 +774,11 @@ public class Main {
         }*/
 
         //Rock paper scissors game
-        String[] moves = {"rock", "paper", "scissors"};
+/*        String[] moves = {"rock", "paper", "scissors"};
 
         Scanner input = new Scanner(System.in);
         boolean repeat = true;
-        while (repeat == true) {
+        while (repeat) {
             int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
             String cpu = moves[randomNum];
             System.out.println("Enter your move (Rock/Paper/Scissors):");
@@ -807,7 +807,7 @@ public class Main {
                 System.out.println("Invalid input. Exiting game.");
                 repeat = false;
             }
-        }
+        }*/
 
         //62. Check Subtraction Difference
  /*       Scanner input = new Scanner(System.in);
@@ -818,5 +818,26 @@ public class Main {
         System.out.print("Enter the third number: ");
         int third = input.nextInt();
         System.out.println((Math.abs(first - second)>=20 || Math.abs(first - third)>=20 || Math.abs(second - third)>=20));*/
+
+        //63 Common Digit in numbers
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        int n1 = input.nextInt();
+        System.out.println("Enter the secon number:");
+        int n2 = input.nextInt();
+        boolean result = hasCommonDigit(n1, n2);
+        System.out.println(result);
+    }
+    public static boolean hasCommonDigit(int n1, int n2) {
+        if (n1 >= 25 && n1 <= 75 && n2 >= 25 && n2 <= 75) {
+            String s1 = String.valueOf(n1);
+            String s2 = String.valueOf(n2);
+            return (s1.charAt(0) == s2.charAt(0) ||
+                    s1.charAt(0) == s2.charAt(1) ||
+                    s1.charAt(1) == s2.charAt(0) ||
+                    s1.charAt(1) == s2.charAt(1));
+        } else {
+            return false;
+        }
     }
 }
