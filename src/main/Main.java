@@ -937,7 +937,48 @@ public class Main {
                     break;
             }
         }*/
+/*        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        Map<Integer, Integer>map = new HashMap<>();
+        for(int i =0; i<nums.length; i++){
+            int complement = target-nums[i];
+            if(map.containsKey(complement)){
+                System.out.println(map.get(complement) + ", " + i);
+            }
+            map.put(nums[i],i);
+        }
+        throw new IllegalArgumentException();*/
 
-        
+/*
+        String s = "abca";
+        char[] ans = new char[s.length()];
+        int ansLen = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            boolean found = false;
+
+            // Check if the character already exists in ans[0..ansLen)
+            for (int j = 0; j < ansLen; j++) {
+                if (s.charAt(i) == ans[j]) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                break; // stop when a duplicate is found
+            } else {
+                ans[ansLen] = s.charAt(i); // add character to ans list
+                ansLen++;
+            }
+        }
+
+        System.out.print("Answer: ");
+        for (int i = 0; i < ansLen; i++) {
+            System.out.print(ans[i]);
+        }
+        System.out.println("\nLength: " + ansLen);
+*/
+
     }
 }
