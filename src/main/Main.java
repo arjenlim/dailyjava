@@ -774,25 +774,27 @@ public class Main {
         }*/
 
         //Rock paper scissors game
-/*        String[] moves = {"rock", "paper", "scissors"};
-
+        /*String[] moves = {"rock", "paper", "scissors", "lizard", "spock"};
         Scanner input = new Scanner(System.in);
         boolean repeat = true;
         while (repeat) {
-            int randomNum = ThreadLocalRandom.current().nextInt(0, 3);
+            int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
             String cpu = moves[randomNum];
-            System.out.println("Enter your move (Rock/Paper/Scissors):");
-            String playermove = input.next().toLowerCase().trim();
-            if (!playermove.equals("rock") && !playermove.equals("paper") && !playermove.equals("scissors")) {
-                System.out.println("Invalid move. Please choose your move again (Rock/Paper/Scissors)");
+            System.out.println("Enter your move (Rock/Paper/Scissors/Lizard/Spock):");
+            String player = input.next().toLowerCase().trim();
+            if (!player.equals("rock") && !player.equals("paper") && !player.equals("scissors") && !player.equals("lizard") && !player.equals("spock")) {
+                System.out.println("Invalid move. Please choose your move again (Rock/Paper/Scissors/Lizard/Spock)");
                 continue;
             }
             System.out.println("Computer chose " + Character.toUpperCase(cpu.charAt(0)) + cpu.substring(1));
-            if (playermove.equals(cpu)) {
+            if (player.equals(cpu)) {
                 System.out.println("It's a draw!");
-            } else if (playermove.equals("rock") && cpu.equals("scissors") ||
-                    playermove.equals("paper") && cpu.equals("rock") ||
-                    playermove.equals("scissors") && cpu.equals("paper")) {
+            } else if (
+                    player.equals("rock") && cpu.equals("scissors") || player.equals("rock") && cpu.equals("lizard") ||
+                    player.equals("paper") && cpu.equals("rock") || player.equals("paper") && cpu.equals("spock") ||
+                    player.equals("scissors") && cpu.equals("paper") || player.equals("scissors") && cpu.equals("lizard") ||
+                    player.equals("lizard") && cpu.equals("spock") || player.equals("lizard") && cpu.equals("paper") ||
+                    player.equals("spock") && cpu.equals("scissors") || player.equals("spock") && cpu.equals("rock")) {
                 System.out.println("You won!");
             } else {
                 System.out.println("You lost!");
@@ -820,7 +822,7 @@ public class Main {
         System.out.println((Math.abs(first - second)>=20 || Math.abs(first - third)>=20 || Math.abs(second - third)>=20));*/
 
         //63 Common Digit in numbers
-        Scanner input = new Scanner(System.in);
+/*        Scanner input = new Scanner(System.in);
         System.out.println("Enter the first number:");
         int n1 = input.nextInt();
         System.out.println("Enter the secon number:");
@@ -838,6 +840,104 @@ public class Main {
                     s1.charAt(1) == s2.charAt(1));
         } else {
             return false;
-        }
+        }*/
+
+        /*//To-do list
+        Scanner input = new Scanner(System.in);
+        List<String> viewtask= new ArrayList<String>();
+        List<String> taskdone= new ArrayList<String>();
+        boolean repeat = true;
+        System.out.print("Welcome to To-Do list!\n" +
+                "1. View ongoing tasks\n" +
+                "2. Add task\n" +
+                "3. Mark task as done\n" +
+                "4. Delete task\n" +
+                "5. Exit\n");
+
+        while (repeat){
+            System.out.print("Choose your option (number): "+
+                    "1. View ongoing tasks\n" +
+                    "2. Add task\n" +
+                    "3. Mark task as done\n" +
+                    "4. Delete task\n" +
+                    "5. Exit\n");
+            int init = input.nextInt();
+            switch(init) {
+                case 1://view task
+                    if (viewtask.isEmpty()) {
+                        System.out.println("There is no task");
+                        break;
+                    }else {
+                        for (int i = 0; i < viewtask.size(); i++) {
+                            System.out.println((i + 1) + ". " + viewtask.get(i));
+                        }
+                        break;
+                    }
+                case 2://add task
+                    input.nextLine();//consume leftover newline
+                    System.out.print("Please enter your task: ");
+                    String task = input.nextLine();
+                    if(!task.trim().isEmpty()) {
+                        viewtask.add(task);
+                    }else {
+                        System.out.println("Invalid task description!");
+                    }
+                    break;
+
+                case 3://mark task as done
+                    if (viewtask.isEmpty()) {
+                        System.out.println("There is no task");
+                        break;
+                    }else {
+                        System.out.println("Ongoing Tasks:");
+                        for (int i = 0; i < viewtask.size(); i++) {
+                            System.out.println((i + 1) + ". " + viewtask.get(i));
+                        }
+                        if (taskdone.isEmpty()){
+                            System.out.println("There is no completed task");
+                        }else {
+                            System.out.println("Completed Tasks:");
+                            for (int i = 0; i < taskdone.size(); i++) {
+                                System.out.println((i + 1) + ". " + taskdone.get(i));
+                            }
+                        }
+                        System.out.print("Please enter a task number to mark as done: ");
+                        int done = input.nextInt();
+                        if (done < 1 || done > viewtask.size()) {
+                            System.out.println("Invalid task number.");
+                            break;
+                        }
+                        System.out.println("Task no." + done + " " + viewtask.get(done - 1) + " has been marked as done");
+                        taskdone.add(viewtask.get(done - 1));
+                        viewtask.remove(done - 1);
+                        System.out.println("Completed Tasks:");
+                        for (int i = 0; i < taskdone.size(); i++) {
+                            System.out.println((i + 1) + ". " + taskdone.get(i));
+                        }
+                        break;
+                    }
+
+                case 4://delete task
+                    if (viewtask.isEmpty()) {
+                        System.out.println("There is no task");
+                        break;
+                    }else {
+                        for (int i = 0; i < viewtask.size(); i++) {
+                            System.out.println((i + 1) + ". " + viewtask.get(i));
+                        }
+                        System.out.print("Please enter a task number to delete: ");
+                        int del = input.nextInt();
+                        System.out.println("Task number " + del + " " + viewtask.get(del - 1) + " has been deleted");
+                        viewtask.remove(del - 1);
+                        break;
+                    }
+
+                case 5://Exit
+                    repeat = false;
+                    break;
+            }
+        }*/
+
+        
     }
 }
