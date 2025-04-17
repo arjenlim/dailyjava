@@ -774,7 +774,7 @@ public class Main {
         }*/
 
         //Rock paper scissors game
-        /*String[] moves = {"rock", "paper", "scissors", "lizard", "spock"};
+/*        String[] moves = {"rock", "paper", "scissors", "lizard", "spock"};
         Scanner input = new Scanner(System.in);
         boolean repeat = true;
         while (repeat) {
@@ -842,20 +842,15 @@ public class Main {
             return false;
         }*/
 
-        /*//To-do list
-        Scanner input = new Scanner(System.in);
+        //To-do list
+/*        Scanner input = new Scanner(System.in);
         List<String> viewtask= new ArrayList<String>();
         List<String> taskdone= new ArrayList<String>();
         boolean repeat = true;
-        System.out.print("Welcome to To-Do list!\n" +
-                "1. View ongoing tasks\n" +
-                "2. Add task\n" +
-                "3. Mark task as done\n" +
-                "4. Delete task\n" +
-                "5. Exit\n");
+        System.out.print("Welcome to To-Do list!\n");
 
         while (repeat){
-            System.out.print("Choose your option (number): "+
+            System.out.print("Choose your option (number):\n"+
                     "1. View ongoing tasks\n" +
                     "2. Add task\n" +
                     "3. Mark task as done\n" +
@@ -979,6 +974,32 @@ public class Main {
         }
         System.out.println("\nLength: " + ansLen);
 */
+        //lc 121
+/*        int[] prices = {0, 6, -3, 7};
+        int buy = prices[0];
+        int max_profit =0;
 
+        for(int i =0; i< prices.length; i++){
+            if(prices[i] < buy){
+                buy = prices[i];
+            }
+            int profit = prices[i] - buy;
+            if(profit > max_profit){
+                max_profit = profit;
+            }
+        }
+        System.out.println(max_profit);*/
+        //longest substring without repeating characters
+        /*String s = "abcabcbb";
+        ArrayList<Character> c = new ArrayList<Character>();
+        int maxLength = 0;
+        for(int i =0; i < s.length(); i++){
+            while(c.contains(s.charAt(i))){
+                c.remove(0);
+            }
+            c.add(s.charAt(i));
+            maxLength = Math.max(maxLength, c.size());
+        }
+        System.out.println(maxLength);*/
     }
 }
