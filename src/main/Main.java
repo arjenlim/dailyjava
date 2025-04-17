@@ -1001,5 +1001,65 @@ public class Main {
             maxLength = Math.max(maxLength, c.size());
         }
         System.out.println(maxLength);*/
+
+        //valid parenthesis
+/*        String s = "([{}])";
+        Stack<Character> stack = new Stack<>();
+        for(int i =0; i<s.length(); i++){
+            switch (s.charAt(i)){
+                case '(':
+                    stack.push(')');
+                    break;
+                case '{':
+                    stack.push('}');
+                    break;
+                case '[':
+                    stack.push(']');
+                    break;
+                default:
+                    if (stack.isEmpty() || stack.pop() != s.charAt(i)) {
+                        System.out.println("false");
+                        return; // Exit early if mismatch
+                    }
+            }
+        }
+        System.out.println(stack.isEmpty());*/
+/*
+        public boolean isValid(String s) {
+            Stack<Character> stack = new Stack<>();
+
+            for (int i = 0; i < s.length(); i++) {
+                switch (s.charAt(i)) {
+                    case '(':
+                        stack.push(')');
+                        break;
+                    case '{':
+                        stack.push('}');
+                        break;
+                    case '[':
+                        stack.push(']');
+                        break;
+                    default:
+                        if (stack.isEmpty() || stack.pop() != s.charAt(i)) {
+                            return false;
+                        }
+                }
+            }
+
+            return stack.isEmpty();
+        }
+*/
+
+        /*String s = "pwwkew";
+        int maxLength = 0;
+        ArrayList<Character> c = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            while (c.contains(s.charAt(i))) {
+                c.remove(0);  // Remove characters from the front until the duplicate is removed
+            }
+            c.add(s.charAt(i));
+            maxLength = Math.max(maxLength, c.size());
+        }
+        System.out.println(maxLength);*/
     }
 }
